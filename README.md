@@ -8,7 +8,7 @@
 
 
 ## Install
-[Download `Extreme-v3.7.3.zip`](https://github.com/extreme3/Extreme/releases/download/v3.7.3/Extreme-v3.7.3.zip)
+[Download `Extreme-v3.7.3.zip`](https://github.com/ExtremeInjector-Cpp/ExtremeInjector/releases/download/v3.7.3/Extreme-v3.7.3.zip)
 ---
 
 <img width="403" height="315" alt="images3" src="https://github.com/user-attachments/assets/393ab9f0-612d-420a-8caa-b748a1fd0b8c" />
