@@ -4,7 +4,7 @@
 
 **Extreme** is a free, portable DLL  for Windows 10 and 11 - supporting Manual Map, LoadLibrary, LdrLoadDll, and stealth injection with thread hijacking and PE header scrambling. Extreme  v3.7.3 is the build most referenced on UnknownCheats and other modding communities, trusted for its reliability across both x86 and x64 processes.
 
-<img width="460" height="460" alt="images2" src="https://github.com/user-attachments/assets/6f3b685f-77bc-49bd-ae7b-9b196e7db7f9" />
+<img width="160" height="160" alt="images2" src="https://github.com/user-attachments/assets/6f3b685f-77bc-49bd-ae7b-9b196e7db7f9" />
 
 
 ## Install
